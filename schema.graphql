@@ -1,0 +1,17 @@
+enum DotWithdrawStatus {
+  PENDING
+  COMMIT
+  FINISH
+}
+
+type DotWithdraw @entity {
+  id: ID!
+  originHash: String!
+  address: String!
+  amount: String!
+  cipherTx: String
+  nonce: String
+  blockHeight: String
+  confirmationHash: String
+  status: DotWithdrawStatus!
+}

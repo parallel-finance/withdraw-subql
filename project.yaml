@@ -1,0 +1,19 @@
+specVersion: 0.0.1
+description: The project is for user to have ability to withdraw from Parallel
+repository: "https://github.com/parallel-finance/withdraw-subql"
+schema: ./schema.graphql
+network:
+  endpoint: wss://staging-rpc.parallel.fi
+dataSources:
+  - name: app
+    kind: substrate/Runtime
+    # need to confirm the startBlock
+    startBlock: 7559000
+    mapping:
+      handlers:
+        - handler: handleBatchAll
+          kind: substrate/CallHandler
+          filter:
+            module: utility
+            method: batchAll
+            success: true
