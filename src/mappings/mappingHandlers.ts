@@ -1,5 +1,5 @@
 import { SubstrateExtrinsic } from "@subql/types";
-import { DotWithdrawStatus, DotWithdraw } from "../types";
+import { DotWithdraw } from "../types";
 import type { Extrinsic } from "@polkadot/types/interfaces";
 import type { Vec } from "@polkadot/types";
 
@@ -32,12 +32,13 @@ const handleDotWithdraw = async (extrinsic: SubstrateExtrinsic) => {
   }
 
   const address = extrinsic.extrinsic.signer.toString();
+  const blockHeight = extrinsic.block.block.header.number.toNumber();
   const record = DotWithdraw.create({
-    id: extrinsic.extrinsic.hash.toString(),
+    id: `${blockHeight}-${extrinsic.idx}`,
     originHash: extrinsic.extrinsic.hash.toString(),
     address,
     amount: amountRaw.toString(),
-    status: DotWithdrawStatus.PENDING,
+    blockHeight
   });
 
   logger.info(JSON.stringify(record));
