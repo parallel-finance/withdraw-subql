@@ -48,7 +48,7 @@ Need to prepare your [SUBQL_ACCESS_TOKEN](https://doc.subquery.network/publish/i
 
 ### Get IPFS CID from github action
 
-The check the response in deployment action `Publish to IPFS` step, for [example](https://github.com/parallel-finance/widthdraw-subql/runs/5580416630?check_suite_focus=true), there should be as following:
+The check the response in deployment action `Publish to IPFS` step, for [example](https://github.com/parallel-finance/withdraw-subql/runs/5879173033?check_suite_focus=true ), there should be as following:
 
 ```
 Building and packing code... done
@@ -62,6 +62,6 @@ Use `CID` for next step.
 
 Go To subQuery project page, click Deploy button for staging slot and enter the CID you previously get. After staging finished deployment and everything looks good. Click `Promote to production` deploy the changes to production slot.
 
-- Staging: https://project.subquery.network/project/parallel-finance/staging-crowdloan-pallet
-- Heiko: https://project.subquery.network/project/parallel-finance/crowdloan-via-heiko
+- Staging: https://project.subquery.network/project/parallel-finance/parallel-dot-withdraw-subql
+- Heiko: TBD
 - Parallel: TBD

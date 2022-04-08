@@ -3,7 +3,7 @@ import { DotWithdraw } from "../types";
 import type { Extrinsic } from "@polkadot/types/interfaces";
 import type { Vec } from "@polkadot/types";
 
-const PARALLEL_REFUND_ADDR = "???";
+const PARALLEL_REFUND_ADDR = "p8F4qJh9mpENkatLLRgL5kVHmL95WSeKMhDEcFBjMGztktkiJ";
 
 export const handleBatchAll = async (extrinsic: SubstrateExtrinsic) => {
   await handleDotWithdraw(extrinsic);
