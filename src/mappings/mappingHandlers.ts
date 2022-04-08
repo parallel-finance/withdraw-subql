@@ -14,7 +14,7 @@ const handleDotWithdraw = async (extrinsic: SubstrateExtrinsic) => {
   if (
     calls.length < 2 ||
     !checkTransaction("system", "remark", calls[0]) ||
-    !checkTransaction("balances", "transfer", calls[1])
+    !checkTransaction("assets", "transfer", calls[1])
   ) {
     return;
   }
