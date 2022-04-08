@@ -16,6 +16,7 @@ const handleDotWithdraw = async (extrinsic: SubstrateExtrinsic) => {
     !checkTransaction("system", "remark", calls[0]) ||
     !checkTransaction("assets", "transfer", calls[1])
   ) {
+    logger.info(`Invalid extrinsic format ${calls.hash.toString()}`);
     return;
   }
   const [
@@ -23,11 +24,12 @@ const handleDotWithdraw = async (extrinsic: SubstrateExtrinsic) => {
       args: [remarkRaw],
     },
     {
-      args: [addressRaw, amountRaw],
+      args: [idRaw, addressRaw, amountRaw],
     },
   ] = calls.toArray();
 
   if (addressRaw.toString() !== PARALLEL_REFUND_ADDR) {
+    logger.info(`Irrelated address: ${addressRaw.toString()}`);
     return;
   }
 
@@ -38,7 +40,7 @@ const handleDotWithdraw = async (extrinsic: SubstrateExtrinsic) => {
     originHash: extrinsic.extrinsic.hash.toString(),
     address,
     amount: amountRaw.toString(),
-    blockHeight
+    blockHeight,
   });
 
   logger.info(JSON.stringify(record));
