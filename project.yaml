@@ -6,11 +6,11 @@ repository: "https://github.com/parallel-finance/withdraw-subql"
 schema:
   file: ./schema.graphql
 network:
-  genesisHash: "0x6c6f83cc4d24cca4baf440f6d1b47dfc4059f3a7c0cab42d97cc81914a54ef4a"
-  endpoint: "wss://regnet2-rpc.parallel.fi"
+  genesisHash: "0xe61a41c53f5dcd0beb09df93b34402aada44cb05117b71059cce40a2723a4e97"
+  endpoint: "wss://parallel.api.onfinality.io/public-ws"
 dataSources:
   - kind: substrate/Runtime
-    startBlock: 98640
+    startBlock: 1
     mapping:
       file: ./dist/index.js
       handlers:
