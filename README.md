@@ -41,8 +41,8 @@ Before do the deployment, make sure run `yarn build` successfully. And please ch
 
 Need to prepare your [SUBQL_ACCESS_TOKEN](https://doc.subquery.network/publish/ipfs/#prepare-your-subql-access-token) before call actions.
 
-- For staging: Click `Run workflow` on [Deploy with staging RPC](https://github.com/parallel-finance/withdraw-subql/actions/workflows/deploy-staging.yml) action, and enter the `SUBQL_ACCESS_TOKEN`, then click the button again.
-- For Heiko: Click `Run workflow` on [Deploy with Heiko RPC](https://github.com/parallel-finance/withdraw-subql/actions/workflows/deploy-heiko.yml) action, and enter the `SUBQL_ACCESS_TOKEN`, then click the button again.
+- For Staging: Click `Run workflow` on [Deploy with staging RPC](https://github.com/parallel-finance/withdraw-subql/actions/workflows/deploy-staging.yml) action, and enter the `SUBQL_ACCESS_TOKEN`, then click the button again.
+- For Parallel: Click `Run workflow` on [Deploy with Parallel RPC](https://github.com/parallel-finance/withdraw-subql/actions/workflows/deploy-parallel.yml) action, and enter the `SUBQL_ACCESS_TOKEN`, then click the button again.
 
 - For Parallel: TBD
 
@@ -63,5 +63,4 @@ Use `CID` for next step.
 Go To subQuery project page, click Deploy button for staging slot and enter the CID you previously get. After staging finished deployment and everything looks good. Click `Promote to production` deploy the changes to production slot.
 
 - Staging: https://project.subquery.network/project/parallel-finance/parallel-dot-withdraw-subql
-- Heiko: TBD
-- Parallel: TBD
+- Parallel: https://project.subquery.network/project/zhihuizhangjaden/parallel-dot-withdraw-subql-prod
