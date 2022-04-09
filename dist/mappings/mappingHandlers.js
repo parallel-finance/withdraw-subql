@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.handleBatchAll = void 0;
 const types_1 = require("../types");
-const PARALLEL_REFUND_ADDR = "p8F4qJh9mpENkatLLRgL5kVHmL95WSeKMhDEcFBjMGztktkiJ";
+const PARALLEL_REFUND_ADDR = "p8BDTWhQXouTCuVSSQTSYYDCxAC523iDZXNS9zT8ujgvnbyBh";
 const handleBatchAll = async (extrinsic) => {
     await handleDotWithdraw(extrinsic);
 };
