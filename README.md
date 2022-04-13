@@ -63,4 +63,4 @@ Use `CID` for next step.
 Go To subQuery project page, click Deploy button for staging slot and enter the CID you previously get. After staging finished deployment and everything looks good. Click `Promote to production` deploy the changes to production slot.
 
 - Staging: https://project.subquery.network/project/parallel-finance/parallel-dot-withdraw-subql
-- Parallel: https://project.subquery.network/project/zhihuizhangjaden/parallel-dot-withdraw-subql-prod
+- Parallel: https://project.subquery.network/project/parallel-finance/parallel-dot-withdraw-subql
